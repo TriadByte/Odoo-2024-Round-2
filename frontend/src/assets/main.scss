@@ -1,0 +1,87 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+
+// importing core styling file
+@import "./0/fontawesome/scss/fontawesome.scss";
+
+// our project needs Solid + Brands
+@import "./0/fontawesome/scss/solid.scss";
+@import "./0/fontawesome/scss/brands.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hund{
+  font-size: 8vw;
+}
+
+body {
+  max-height: max-content;
+}
+
+.text-place::placeholder{
+  color: rgb(209, 209, 209) !important;
+}
+
+.text-place{
+  color: rgb(255, 255, 255) !important;
+}
+
+#root {
+  height: 100vh;
+  max-height: max-content;
+  box-sizing: border-box;
+
+  .home-bg {
+    background-image: url("http://localhost:5000/static/home-bg.webp");
+    backdrop-filter: brightness(1);
+    background-size: cover;
+  }
+
+  .main-land {
+    background: transparent;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+
+  .bg-karu{
+    background-color: rgba(0, 0, 0, 0.452);
+  }
+
+  .card {
+
+    .card-text {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+
+      .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .card-text:hover .tooltiptext {
+        visibility: visible;
+      }
+  }
+}
